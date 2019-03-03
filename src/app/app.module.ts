@@ -1,12 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpModule, Http } from '@angular/http';
+import { BrowserModule }                    from '@angular/platform-browser';
+import { NgModule }                         from '@angular/core';
+import { HttpModule, Http }                 from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateHttpLoader }              from '@ngx-translate/http-loader';
 
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { AppComponent }                     from './app.component';
+import { NavbarComponent }                  from './navbar/navbar.component';
+import { FooterComponent }                  from './footer/footer.component';
+import { DashboardComponent }               from './dashboard/dashboard.component';
+import { RoutingModule }                    from './app-routing.module';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -17,11 +19,13 @@ export function createTranslateLoader(http: Http) {
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    RoutingModule,
     TranslateModule.forRoot({
       useDefaultLang: true,
       loader: {
