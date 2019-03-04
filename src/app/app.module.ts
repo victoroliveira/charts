@@ -1,5 +1,6 @@
 import { BrowserModule }                    from '@angular/platform-browser';
 import { NgModule }                         from '@angular/core';
+import { HttpClientModule }                 from '@angular/common/http';
 import { HttpModule, Http }                 from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader }              from '@ngx-translate/http-loader';
@@ -25,6 +26,7 @@ export function createTranslateLoader(http: Http) {
   imports: [
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     RoutingModule,
     TranslateModule.forRoot({
       useDefaultLang: true,
