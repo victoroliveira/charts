@@ -1,6 +1,5 @@
-<p>
-  dashboard works!
-</p>
-<div *ngFor="let item of widgetsList">
-  {{item.attributes?.count}}
+<div class="container widgets-list">
+  <div *ngFor="let item of widgets.list">
+    <app-widget [inputData]="item"></app-widget>
+  </div>
 </div>
