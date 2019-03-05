@@ -17,17 +17,25 @@ export class WidgetComponent implements OnInit, OnDestroy {
 
   constructor(private service: WidgetService) { }
 
-  ngOnInit() {
+  /**
+   * Get data on init component
+   */
+  ngOnInit(): void {
     this.getData();
   }
 
-  ngOnDestroy() {
+  /**
+   * Unsubscribe widget data on destroy
+   */
+  ngOnDestroy(): void {
     this.widgetSubscription.unsubscribe();
   }
 
-  getData() {
+  /**
+   * Request Widget data from URL
+   */
+  getData(): void {
     this.widgetSubscription = this.service.getWidgetData(this.inputData.url).subscribe((response) => {
-      console.log(response);
       this.responseData = response.data[0];
     }, (error) => {
       throw {message: error};
