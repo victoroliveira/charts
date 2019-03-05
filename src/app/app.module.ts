@@ -11,6 +11,7 @@ import { FooterComponent }                  from './footer/footer.component';
 import { DashboardComponent }               from './dashboard/dashboard.component';
 import { RoutingModule }                    from './app-routing.module';
 import { WidgetComponent }                  from './widget/widget.component';
+import { LineChartComponent }               from './line-chart/line-chart.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -23,7 +24,8 @@ export function createTranslateLoader(http: Http) {
     NavbarComponent,
     FooterComponent,
     DashboardComponent,
-    WidgetComponent
+    WidgetComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
