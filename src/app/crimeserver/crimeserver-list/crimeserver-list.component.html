@@ -1,10 +1,43 @@
-<div class="container">
+<div class="crimeserver-list p-5">
   <div class="card mt-3">
     <div class="card-header">
       <span translate="CRIMESERVER.LIST.TITLE" [translateParams]="{value: count}"></span>
     </div>
     <div class="card-body">
-
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Seen</th>
+              <th scope="col">URL</th>
+              <th scope="col">Type</th>
+              <th scope="col">Subtype</th>
+              <th scope="col">Status</th>
+              <th scope="col">TM Seen</th>
+              <th scope="col">TM Status</th>
+              <th scope="col">Evidences</th>
+              <th scope="col">@API</th>
+              <th scope="col">@FreeAPI</th>
+              <th scope="col">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data">
+              <td>{{item.attributes.last_seen}}</td>
+              <td>{{item.attributes.crime_server_url}}</td>
+              <td>{{item.attributes.main_type}}</td>
+              <td>{{item.attributes.subtype_name}}</td>
+              <td>{{item.attributes.status}}</td>
+              <td>-</td>
+              <td>-</td>
+              <td>{{item.attributes.is_false_positive}}</td>
+              <td>{{item.attributes.at_feed}}</td>
+              <td>{{item.attributes.at_free_feed}}</td>
+              <td>Details</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
