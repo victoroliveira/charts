@@ -1,6 +1,10 @@
-<div class="container widgets-list">
-  <div *ngFor="let item of widgets.list">
-    <app-widget [inputData]="item"></app-widget>
+<div class="container">
+  <div class="widgets-list mt-3">
+    <div *ngFor="let item of widgets.list">
+      <app-widget [inputData]="item" (click)="setSelectedWidget(item)"></app-widget>
+    </div>
+  </div>
+  <div class="line-chart pt-2">
+    <app-line-chart [inputData]="getSelectedWidget()"></app-line-chart>
   </div>
 </div>
-<app-line-chart></app-line-chart>
