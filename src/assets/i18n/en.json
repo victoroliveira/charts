@@ -1,4 +1,9 @@
 {
+  "CRIMESERVER": {
+    "LIST": {
+      "TITLE": "Crime Server showing {{value}} results"
+    }
+  },
   "NAVBAR": {
     "CRIMESERVERS_DETAIL": "Crimeservers Detail",
     "CRIMESERVERS_LIST": "Crimeservers List",
