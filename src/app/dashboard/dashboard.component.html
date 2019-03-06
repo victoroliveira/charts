@@ -1,4 +1,4 @@
-<div class="container">
+<div class="dashboard-view">
   <div class="widgets-list mt-3">
     <div *ngFor="let item of widgets.list">
       <app-widget [inputData]="item" (click)="setSelectedWidget(item)"></app-widget>
