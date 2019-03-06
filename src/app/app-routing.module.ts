@@ -2,7 +2,7 @@ import { NgModule }                 from '@angular/core';
 import { RouterModule, Routes }     from '@angular/router';
 
 import { DashboardComponent }       from './dashboard/dashboard.component';
-import { CrimeserverListComponent } from './crimeserver-list/crimeserver-list.component';
+import { CrimeserverListComponent } from './crimeserver/crimeserver-list/crimeserver-list.component';
 
 const routes: Routes = [
   {path: 'list', component: CrimeserverListComponent},

@@ -12,7 +12,7 @@ import { DashboardComponent }               from './dashboard/dashboard.componen
 import { RoutingModule }                    from './app-routing.module';
 import { WidgetComponent }                  from './widget/widget.component';
 import { LineChartComponent }               from './line-chart/line-chart.component';
-import { CrimeserverListComponent } from './crimeserver-list/crimeserver-list.component';
+import { CrimeserverListComponent }         from './crimeserver/crimeserver-list/crimeserver-list.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
