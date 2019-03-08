@@ -8,13 +8,13 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">Seen</th>
-              <th scope="col">URL</th>
+              <th class="text-primary" scope="col">Seen</th>
+              <th class="text-primary" scope="col">URL</th>
               <th scope="col">Type</th>
-              <th scope="col">Subtype</th>
-              <th scope="col">Status</th>
-              <th scope="col">TM Seen</th>
-              <th scope="col">TM Status</th>
+              <th class="text-primary" scope="col">Subtype</th>
+              <th class="text-primary" scope="col">Status</th>
+              <th class="text-primary" scope="col">TM Seen</th>
+              <th class="text-primary" scope="col">TM Status</th>
               <th scope="col">Evidences</th>
               <th scope="col">@API</th>
               <th scope="col">@FreeAPI</th>
@@ -27,13 +27,13 @@
               <td>{{item.attributes.crime_server_url}}</td>
               <td>{{item.attributes.main_type}}</td>
               <td>{{item.attributes.subtype_name}}</td>
-              <td>{{item.attributes.status}}</td>
-              <td>-</td>
-              <td>-</td>
-              <td>{{item.attributes.is_false_positive}}</td>
-              <td>{{item.attributes.at_feed}}</td>
-              <td>{{item.attributes.at_free_feed}}</td>
-              <td>Details</td>
+              <td class="text-center text-success"><i class="fa fa-skyatlas"></i></td>
+              <td class="text-center">-</td>
+              <td class="text-center">-</td>
+              <td class="text-center text-danger"><i class="fa fa-times"></i></td>
+              <td class="text-center text-danger"><i class="fa fa-question-circle"></i></td>
+              <td class="text-center text-danger"><i class="fa fa-question-circle"></i></td>
+              <td class="text-center"><a [routerLink]="['/dashboard']"><i class="fa fa-search-plus"></i></a></td>
             </tr>
           </tbody>
         </table>
