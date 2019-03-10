@@ -1,3 +1,24 @@
+export interface CrimeserverList {
+  data: Array<CrimeserverData>;
+  links: CrimeserverLinks;
+  meta: CrimeserverMetadata;
+}
+
+export interface CrimeserverLinks {
+  first: string;
+  last: string;
+  next: string;
+  prev: string;
+}
+
+export interface CrimeserverMetadata {
+  pagination: {
+    count: number;
+    limit: number;
+    offset: number;
+  };
+}
+
 export interface CrimeserverData {
   attributes: CrimeserverAttributes;
   id: string;

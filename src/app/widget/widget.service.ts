@@ -10,7 +10,7 @@ export class WidgetService {
   /**
    * Get widget data
    * @param url URL to get widget data
-   * @returns Observable with widget data
+   * @returns {Observable} Observable with widget data
    */
   getWidgetData(url: string): Observable<any> {
     return this.http.get(`../../assets/json/dashboard/widgets/${url}_count.json`);

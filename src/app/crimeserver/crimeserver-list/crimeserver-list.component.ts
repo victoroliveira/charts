@@ -1,6 +1,8 @@
-import { Component, OnInit, OnDestroy }    from '@angular/core';
-import { CrimeserverService }   from '../crimeserver.service';
-import { Subscription } from 'rxjs/Subscription';
+import { Component, OnInit, OnDestroy }         from '@angular/core';
+import { Subscription }                         from 'rxjs/Subscription';
+
+import { CrimeserverService }                   from '../crimeserver.service';
+import { CrimeserverData, CrimeserverMetadata } from '../crimeserver.model';
 
 @Component({
   selector: 'app-crimeserver-list',
@@ -10,21 +12,33 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class CrimeserverListComponent implements OnInit, OnDestroy {
   count: number;
-  data: any;
-  metadata: any;
+  data: Array<CrimeserverData>;
+  metadata: CrimeserverMetadata;
   listSubscription: Subscription;
 
   constructor(private service: CrimeserverService) { }
 
-  ngOnInit() {
+  /**
+   * Initialize component
+   * @returns {void}
+   */
+  ngOnInit(): void {
     this.getData();
   }
 
-  ngOnDestroy() {
+  /**
+   * Destroy component and unsubscribe
+   * @returns {void}
+   */
+  ngOnDestroy(): void {
     this.listSubscription.unsubscribe();
   }
 
-  getData() {
+  /**
+   * Get Crime server data
+   * @returns {void}
+   */
+  getData(): void {
     this.listSubscription = this.service.getCrimeserverData().subscribe((response) => {
       this.setData(response.data);
       this.setMetadata(response.meta);
@@ -33,16 +47,31 @@ export class CrimeserverListComponent implements OnInit, OnDestroy {
     });
   }
 
-  setData(data: any) {
+  /**
+   * Set list of crimeserver data
+   * @param data Crimeserver data list
+   * @returns {void}
+   */
+  setData(data: Array<CrimeserverData>): void {
     this.data = data;
   }
 
-  setMetadata(meta: any) {
+  /**
+   * Set metadata of a crime server list
+   * @param meta Crime server list metadata
+   * @returns {void}
+   */
+  setMetadata(meta: CrimeserverMetadata): void {
     this.metadata = meta;
-    this.updateCount(this.metadata.pagination.count);
+    this.setCount(this.metadata.pagination.count);
   }
 
-  updateCount(count: number) {
+  /**
+   * Set total itens of a crime server list
+   * @param count Total number of itens
+   * @returns {void}
+   */
+  setCount(count: number): void {
     this.count = count;
   }
 

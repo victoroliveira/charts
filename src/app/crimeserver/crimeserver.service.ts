@@ -9,7 +9,7 @@ export class CrimeserverService {
 
   /**
    * Get Crimeserver data
-   * @returns Observable with crimeserver data
+   * @returns {Observable} Observable with crimeserver data
    */
   getCrimeserverData(): Observable<any> {
     return this.http.get('../../assets/json/crimeserver_list/crime_servers_list.json');

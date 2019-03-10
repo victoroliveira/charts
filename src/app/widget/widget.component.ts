@@ -19,6 +19,7 @@ export class WidgetComponent implements OnInit, OnDestroy {
 
   /**
    * Get data on init component
+   * @returns {void}
    */
   ngOnInit(): void {
     this.getData();
@@ -26,6 +27,7 @@ export class WidgetComponent implements OnInit, OnDestroy {
 
   /**
    * Unsubscribe widget data on destroy
+   * @returns {void}
    */
   ngOnDestroy(): void {
     this.widgetSubscription.unsubscribe();
@@ -33,6 +35,7 @@ export class WidgetComponent implements OnInit, OnDestroy {
 
   /**
    * Request Widget data from URL
+   * @returns {void}
    */
   getData(): void {
     this.widgetSubscription = this.service.getWidgetData(this.inputData.url).subscribe((response) => {
