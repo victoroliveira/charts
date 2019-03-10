@@ -1,8 +1,11 @@
 <div class="crimeserver-details pl-3 pt-3">
   <h5 translate="CRIMESERVER.DETAILS.TITLE" [translateParams]="{URL: detailsData?.attributes.crime_server_url}"></h5>
-  <div class="row pt-3 mb-5">
+  <div class="row pt-3 mb-5 d-flex justify-content-around">
     <div class="col-5">
       <app-crimeserver-details-card [data]="detailsData"></app-crimeserver-details-card>
+    </div>
+    <div class="col-5">
+      <app-crimeserver-details-diagram></app-crimeserver-details-diagram>
     </div>
   </div>
 </div>
