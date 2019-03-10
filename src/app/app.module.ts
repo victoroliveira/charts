@@ -4,6 +4,7 @@ import { HttpClientModule }                 from '@angular/common/http';
 import { HttpModule, Http }                 from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader }              from '@ngx-translate/http-loader';
+import { PaginationModule }                 from 'ngx-bootstrap/pagination';
 
 import { AppComponent }                     from './app.component';
 import { CrimeserverListComponent }         from './crimeserver/crimeserver-list/crimeserver-list.component';
@@ -36,6 +37,7 @@ export function createTranslateLoader(http: Http) {
     HttpClientModule,
     RoutingModule,
     SharedModule,
+    PaginationModule.forRoot(),
     TranslateModule.forRoot({
       useDefaultLang: true,
       loader: {
