@@ -4,6 +4,9 @@
       "TITLE": "Crime Server showing {{value}} results"
     }
   },
+  "FOOTER": {
+    "TEXT": "Copyright<i class=\"fa fa-copyright\"></i> Sticky Footer"
+  },
   "NAVBAR": {
     "CRIMESERVERS_DETAIL": "Crimeservers Detail",
     "CRIMESERVERS_LIST": "Crimeservers List",
