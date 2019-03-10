@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgCircleProgressModule }           from 'ng-circle-progress';
 
 import { CrimeserverDetailsCardComponent }  from './crimeserver-details-card.component';
+import { TextEllipsisPipe }                 from '../../shared/text-ellipsis.pipe';
+import { DateFormatPipe }                   from '../../shared/date-format.pipe';
 
 describe('CrimeserverDetailsCardComponent', () => {
   let component: CrimeserverDetailsCardComponent;
@@ -8,7 +11,12 @@ describe('CrimeserverDetailsCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CrimeserverDetailsCardComponent ]
+      imports: [ NgCircleProgressModule.forRoot() ],
+      declarations: [
+        CrimeserverDetailsCardComponent,
+        TextEllipsisPipe,
+        DateFormatPipe
+      ]
     })
     .compileComponents();
   }));
