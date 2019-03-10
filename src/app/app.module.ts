@@ -13,6 +13,8 @@ import { RoutingModule }                    from './app-routing.module';
 import { WidgetComponent }                  from './widget/widget.component';
 import { LineChartComponent }               from './line-chart/line-chart.component';
 import { CrimeserverListComponent }         from './crimeserver/crimeserver-list/crimeserver-list.component';
+import { DateFormatPipe } from './shared/date-format.pipe';
+import { TextEllipsisPipe } from './shared/text-ellipsis.pipe';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -27,7 +29,9 @@ export function createTranslateLoader(http: Http) {
     DashboardComponent,
     WidgetComponent,
     LineChartComponent,
-    CrimeserverListComponent
+    CrimeserverListComponent,
+    DateFormatPipe,
+    TextEllipsisPipe
   ],
   imports: [
     BrowserModule,

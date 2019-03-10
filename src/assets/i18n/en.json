@@ -1,7 +1,18 @@
 {
   "CRIMESERVER": {
     "LIST": {
-      "TITLE": "Crime Server showing {{value}} results"
+      "TITLE": "Crime Server showing {{value}} results",
+      "SEEN": "Seen",
+      "URL": "URL",
+      "TYPE": "Type",
+      "SUBTYPE": "Subtype",
+      "STATUS": "Status",
+      "TM_SEEN": "TM Seen",
+      "TM_STATUS": "TM Status",
+      "EVIDENCES": "Evidences",
+      "API": "@API",
+      "FREE_API": "@FreeAPI",
+      "DETAILS": "Details"
     }
   },
   "FOOTER": {
