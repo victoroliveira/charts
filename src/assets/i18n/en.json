@@ -13,7 +13,24 @@
       "API": "@API",
       "FREE_API": "@FreeAPI",
       "DETAILS": "Details"
+    },
+    "DETAILS": {
+      "TITLE": "Details for {{URL}}"
     }
+  },
+  "DETAILS_CARD": {
+    "SEVERITY": "Severity",
+    "CONFIDENCE": "Confidence",
+    "THREATSCORE": "ThreatScore",
+    "STATUS": "Status",
+    "TYPE": "Type",
+    "INDICATOR": "Indicator",
+    "IP": "IP",
+    "TAGS": "Tags",
+    "LAST_MODIFIED": "Last Modified",
+    "ENTRIES": "Entries",
+    "COUNTRY": "Country",
+    "ASN": "ASN"
   },
   "FOOTER": {
     "TEXT": "Copyright<i class=\"fa fa-copyright\"></i> Sticky Footer"

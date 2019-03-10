@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row text-center">
+      <div class="col-4">
+        <div translate="DETAILS_CARD.SEVERITY"></div>
+        <h4 class="text-danger">VERY-HIGH</h4>
+      </div>
+      <div class="col-4" translate="DETAILS_CARD.CONFIDENCE"></div>
+      <div class="col-4" translate="DETAILS_CARD.THREATSCORE"></div>
+    </div>
+  </div>
+  <div class="card-footer d-flex justify-content-center">
+    <div class="justify-content-end font-weight-bold text-right">
+      <div class="pr-3" translate="DETAILS_CARD.STATUS"></div>
+      <div class="pr-3" translate="DETAILS_CARD.TYPE"></div>
+      <div class="pr-3" translate="DETAILS_CARD.INDICATOR"></div>
+      <div class="pr-3" translate="DETAILS_CARD.IP"></div>
+      <div class="pr-3" translate="DETAILS_CARD.TAGS"></div>
+      <div class="pr-3" translate="DETAILS_CARD.LAST_MODIFIED"></div>
+      <div class="pr-3" translate="DETAILS_CARD.ENTRIES"></div>
+      <div class="pr-3" translate="DETAILS_CARD.COUNTRY"></div>
+      <div class="pr-3" translate="DETAILS_CARD.ASN"></div>
+    </div>
+    <div class="justify-content-start">
+      <div>{{data?.attributes.status}}</div>
+      <div>{{data?.type}}</div>
+      <div>{{data?.attributes.crime_server_url | textEllipsis}}</div>
+      <div>195.22.126.203</div>
+      <div>{{data?.attributes.subtype_name}}</div>
+      <div>{{data?.attributes.last_seen | dateFormat}}</div>
+      <div>{{data?.attributes.bots_count}}</div>
+      <div>USA</div>
+      <div>{{data?.id}}</div>
+    </div>
+  </div>
+</div>
