@@ -5,8 +5,34 @@
         <div translate="DETAILS_CARD.SEVERITY"></div>
         <h4 class="text-danger">VERY-HIGH</h4>
       </div>
-      <div class="col-4" translate="DETAILS_CARD.CONFIDENCE"></div>
-      <div class="col-4" translate="DETAILS_CARD.THREATSCORE"></div>
+      <div class="col-4">
+        <div translate="DETAILS_CARD.CONFIDENCE"></div>
+        <circle-progress
+          [percent]="85"
+          [radius]="60"
+          [outerStrokeWidth]="8"
+          [innerStrokeWidth]="0"
+          [outerStrokeColor]="'#78C000'"
+          [animation]="true"
+          [animationDuration]="300"
+          [showSubtitle]="false"
+          [showUnits]="false">
+        </circle-progress>
+      </div>
+      <div class="col-4">
+        <div translate="DETAILS_CARD.THREATSCORE"></div>
+        <circle-progress
+        [percent]="68"
+        [radius]="60"
+        [outerStrokeWidth]="8"
+        [innerStrokeWidth]="0"
+        [outerStrokeColor]="'#ff0000'"
+        [animation]="true"
+        [animationDuration]="300"
+        [showSubtitle]="false"
+        [showUnits]="false">
+        </circle-progress>
+      </div>
     </div>
   </div>
   <div class="card-footer d-flex justify-content-center">

@@ -5,6 +5,7 @@ import { HttpModule, Http }                 from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader }              from '@ngx-translate/http-loader';
 import { PaginationModule }                 from 'ngx-bootstrap/pagination';
+import { NgCircleProgressModule }           from 'ng-circle-progress';
 
 import { AppComponent }                     from './app.component';
 import { CrimeserverListComponent }         from './crimeserver/crimeserver-list/crimeserver-list.component';
@@ -15,8 +16,8 @@ import { NavbarComponent }                  from './navbar/navbar.component';
 import { RoutingModule }                    from './app-routing.module';
 import { SharedModule }                     from './shared/shared.module';
 import { WidgetComponent }                  from './widget/widget.component';
-import { CrimeserverDetailsComponent } from './crimeserver/crimeserver-details/crimeserver-details.component';
-import { CrimeserverDetailsCardComponent } from './crimeserver/crimeserver-details-card/crimeserver-details-card.component';
+import { CrimeserverDetailsComponent }      from './crimeserver/crimeserver-details/crimeserver-details.component';
+import { CrimeserverDetailsCardComponent }  from './crimeserver/crimeserver-details-card/crimeserver-details-card.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -42,6 +43,7 @@ export function createTranslateLoader(http: Http) {
     RoutingModule,
     SharedModule,
     PaginationModule.forRoot(),
+    NgCircleProgressModule.forRoot(),
     TranslateModule.forRoot({
       useDefaultLang: true,
       loader: {
