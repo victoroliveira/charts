@@ -15,6 +15,7 @@ import { NavbarComponent }                  from './navbar/navbar.component';
 import { RoutingModule }                    from './app-routing.module';
 import { SharedModule }                     from './shared/shared.module';
 import { WidgetComponent }                  from './widget/widget.component';
+import { CrimeserverDetailsComponent } from './crimeserver/crimeserver-details/crimeserver-details.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -29,7 +30,8 @@ export function createTranslateLoader(http: Http) {
     DashboardComponent,
     WidgetComponent,
     LineChartComponent,
-    CrimeserverListComponent
+    CrimeserverListComponent,
+    CrimeserverDetailsComponent
   ],
   imports: [
     BrowserModule,
