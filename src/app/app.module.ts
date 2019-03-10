@@ -6,15 +6,14 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader }              from '@ngx-translate/http-loader';
 
 import { AppComponent }                     from './app.component';
-import { NavbarComponent }                  from './navbar/navbar.component';
-import { FooterComponent }                  from './footer/footer.component';
-import { DashboardComponent }               from './dashboard/dashboard.component';
-import { RoutingModule }                    from './app-routing.module';
-import { WidgetComponent }                  from './widget/widget.component';
-import { LineChartComponent }               from './line-chart/line-chart.component';
 import { CrimeserverListComponent }         from './crimeserver/crimeserver-list/crimeserver-list.component';
-import { DateFormatPipe } from './shared/date-format.pipe';
-import { TextEllipsisPipe } from './shared/text-ellipsis.pipe';
+import { DashboardComponent }               from './dashboard/dashboard.component';
+import { FooterComponent }                  from './footer/footer.component';
+import { LineChartComponent }               from './line-chart/line-chart.component';
+import { NavbarComponent }                  from './navbar/navbar.component';
+import { RoutingModule }                    from './app-routing.module';
+import { SharedModule }                     from './shared/shared.module';
+import { WidgetComponent }                  from './widget/widget.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -29,15 +28,14 @@ export function createTranslateLoader(http: Http) {
     DashboardComponent,
     WidgetComponent,
     LineChartComponent,
-    CrimeserverListComponent,
-    DateFormatPipe,
-    TextEllipsisPipe
+    CrimeserverListComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
     RoutingModule,
+    SharedModule,
     TranslateModule.forRoot({
       useDefaultLang: true,
       loader: {
