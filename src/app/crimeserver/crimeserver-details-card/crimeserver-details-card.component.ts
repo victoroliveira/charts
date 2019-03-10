@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CrimeserverData } from '../crimeserver.model';
+import { CrimeserverData }          from '../crimeserver.model';
 
 @Component({
   selector: 'app-crimeserver-details-card',
